@@ -40,7 +40,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
     ?>
     <main <?= Yii::$app->user->isGuest ? '' : 'id="main"' ?> class="main">
-        <div class="container">
+        <div class="container p-0">
             <?php if (!empty($this->params['breadcrumbs'])): ?>
                 <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
             <?php endif ?>

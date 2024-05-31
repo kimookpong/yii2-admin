@@ -43,13 +43,13 @@ h6 {
 --------------------------------------------------------------*/
 #main {
   margin-top: 60px;
-  padding: 20px 30px;
+  padding: 20px;
   transition: all 0.3s;
 }
 
 @media (max-width: 1199px) {
   #main {
-    padding: 20px;
+    padding: 5px;
   }
 }
 
@@ -222,6 +222,12 @@ h6 {
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+@media (max-width: 1199px) {
+  .card {
+    margin-bottom: 5px;
+  }
 }
 
 .card-header,
