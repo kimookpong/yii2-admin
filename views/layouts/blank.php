@@ -28,18 +28,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body>
     <?php $this->beginBody() ?>
-    <?php
-    if (Yii::$app->user->isGuest) {
-        include ('_headerGuest.php');
-    } else {
-        include ('_header.php');
-        include ('_aside.php');
-    }
-
-    ?>
-    <main <?= Yii::$app->user->isGuest ? '' : 'id="main"' ?> class="main">
+    <main>
         <div class="container">
             <?php if (!empty($this->params['breadcrumbs'])): ?>
                 <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
@@ -48,7 +39,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             <?= $content ?>
         </div>
     </main>
-
 
     <?php $this->endBody() ?>
 </body>
