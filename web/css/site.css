@@ -10,6 +10,11 @@
 }
 
 .row {
-  --bs-gutter-x: 0;
+  --bs-gutter-x: 5px;
   --bs-gutter-y: 0;
+}
+
+.dropdown-menu .dropdown-header,
+.dropdown-menu .dropdown-footer {
+  text-align: left;
 }

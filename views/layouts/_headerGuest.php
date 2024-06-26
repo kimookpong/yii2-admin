@@ -31,7 +31,7 @@ use yii\helpers\Url;
             </li>
 
             <li class="nav-item dropdown pe-3">
-                <a class="nav-link nav-icon fw-bold" href="<?= Url::to(['site/login']) ?>">
+                <a class="nav-link nav-icon fw-bold m-0" href="<?= Url::to(['site/login']) ?>">
                     <i class="bi bi-box-arrow-in-right"></i> เข้าสู่ระบบ
                 </a>
             </li>
