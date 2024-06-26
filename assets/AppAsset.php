@@ -33,6 +33,7 @@ class AppAsset extends AssetBundle
         'css/site.css' . self::MAIN_ASSET_VERSION,
     ];
     public $js = [
+
         'template/assets/vendor/apexcharts/apexcharts.min.js',
         'template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
         'template/assets/vendor/chart.js/chart.umd.js',
@@ -41,7 +42,10 @@ class AppAsset extends AssetBundle
         'template/assets/vendor/simple-datatables/simple-datatables.js',
         'template/assets/vendor/tinymce/tinymce.min.js',
         'template/assets/vendor/php-email-form/validate.js',
-        'template/assets/js/main.js'
+        'template/assets/js/main.js',
+        'https://cdn.jsdelivr.net/npm/sweetalert2@11',
+        'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js',
+        'app/js/_lib.js' . self::MAIN_ASSET_VERSION,
     ];
     public $depends = [
         'yii\web\YiiAsset',

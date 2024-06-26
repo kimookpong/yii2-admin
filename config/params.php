@@ -1,12 +1,18 @@
 <?php
 
+
+$apiBased = 'http://10.250.2.9/apis/';
 return [
-    'meta_project' => 'mySystem',
-    'meta_description' => 'Project Management',
-    'meta_keywords' => 'mySystem',
+    'meta_description' => '',
+    'meta_keywords' => '',
+    'meta_project' => 'Admin',
 
-    'adminEmail' => 'admin@example.com',
-    'senderEmail' => 'noreply@example.com',
-    'senderName' => 'Example.com mailer',
-
+    //api configuration
+    'api_key' => '',
+    'api' => [
+        'test' => [
+            'index' => $apiBased . 'trk/trk-condperson/0/showDashboard2',
+            'index2' => $apiBased . 'trk/trk-condperson/0/showDashboard2',
+        ]
+    ]
 ];

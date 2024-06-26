@@ -58,6 +58,7 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => false,
             'rules' => [
+                'api/<module:[^/]+>/<action:[^/]+>' => 'api/index',
             ],
         ],
     ],
