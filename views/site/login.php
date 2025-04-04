@@ -15,7 +15,7 @@ $this->title = 'Login';
 
 <div class="row justify-content-center">
     <div class="col-lg-4 col-md-6 align-items-center justify-content-center">
-        <div class="card mb-3">
+        <div class="card card my-5">
             <div class="card-body">
                 <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">
@@ -39,10 +39,10 @@ $this->title = 'Login';
                 <div class="col-12">
                     <?= Html::submitButton('Login', ['class' => 'btn btn-primary w-100', 'name' => 'login-button']) ?>
                 </div>
-                <div class="col-12 pt-2">
+                <!-- <div class="col-12 pt-2">
                     <p class="small mb-0">Don't have account? <a href="pages-register.html">Create an
                             account</a></p>
-                </div>
+                </div> -->
                 <?php ActiveForm::end(); ?>
 
             </div>
