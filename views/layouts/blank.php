@@ -30,15 +30,15 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <body class="bg-gradient-primary">
     <?php $this->beginBody() ?>
-    <main>
-        <div class="container">
-            <?php if (!empty($this->params['breadcrumbs'])): ?>
-                <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
-            <?php endif ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
-        </div>
-    </main>
+
+    <div class="container">
+        <?php if (!empty($this->params['breadcrumbs'])): ?>
+            <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+        <?php endif ?>
+        <?= Alert::widget() ?>
+        <?= $content ?>
+    </div>
+
 
     <?php $this->endBody() ?>
 </body>
