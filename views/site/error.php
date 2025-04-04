@@ -11,9 +11,9 @@ use yii\helpers\Url;
 $this->title = $name;
 ?>
 
-<section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center">
-    <h1><?= $exception->statusCode ?></h1>
-    <h2><?= Html::encode($this->title) . ' : ' . nl2br(Html::encode($message)) ?></h2>
-    <a class="btn" href="<?= Url::to(['site/index']) ?>"><i class="bi bi-arrow-left-square"></i> Back to home</a>
-    <img src="/template/assets/img/not-found.svg" class="img-fluid py-5" alt="<?= Html::encode($this->title) ?>">
-</section>
+<div class="text-center">
+    <div class="error mx-auto" data-text="<?= $exception->statusCode ?>"><?= $exception->statusCode ?></div>
+    <p class="lead text-gray-800 mb-5"><?= Html::encode($this->title) . ' : ' . nl2br(Html::encode($message)) ?></p>
+    <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
+    <a href="<?= Url::to(['site/index']) ?>">&larr; Back to Dashboard</a>
+</div>

@@ -17,7 +17,7 @@ $this->registerMetaTag(['charset' => Yii::$app->charset], 'charset');
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no']);
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? Yii::$app->params['meta_description']]);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? Yii::$app->params['meta_keywords']]);
-$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
+$this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/temp/img/undraw_rocket.svg')]);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -28,28 +28,50 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body id="page-top">
     <?php $this->beginBody() ?>
     <?php
-    if (Yii::$app->user->isGuest) {
-        include ('_headerGuest.php');
-    } else {
-        include ('_header.php');
-        include ('_aside.php');
-    }
+    // if (Yii::$app->user->isGuest) {
+    //     include('_headerGuest.php');
+    // } else {
+    //     include('_header.php');
+    //     include('_aside.php');
+    // }
 
     ?>
-    <main <?= Yii::$app->user->isGuest ? '' : 'id="main"' ?> class="main">
-        <div class="container p-0">
-            <?php if (!empty($this->params['breadcrumbs'])): ?>
-                <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
-            <?php endif ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <?php include('_aside.php'); ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <?php include('_header.php'); ?>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <?php if (!empty($this->params['breadcrumbs'])): ?>
+                        <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+                    <?php endif ?>
+                    <?= Alert::widget() ?>
+                    <?= $content ?>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
         </div>
-    </main>
+        <!-- End of Content Wrapper -->
+    </div>
 
-
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
     <?php $this->endBody() ?>
 </body>
 
